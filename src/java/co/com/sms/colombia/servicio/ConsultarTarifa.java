@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.sms.colombia.persistencia.dao;
+package co.com.sms.colombia.servicio;
 
 import co.com.sms.colombia.modelo.dto.Tarifa_TO;
 
 /**
  *
- * Interfaz que contiene los metodos de persistencia relacionados con la entidad
- * Servicio
- *
- * @author Scortech
+ * @author ScorTech
  */
-public interface TarifaDAO {
+public interface ConsultarTarifa {
     
     public Tarifa_TO consultarTarifa() throws Exception;
     

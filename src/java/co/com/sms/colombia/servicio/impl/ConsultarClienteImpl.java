@@ -7,6 +7,7 @@ package co.com.sms.colombia.servicio.impl;
 
 import co.com.sms.colombia.modelo.dto.Usuario_TO;
 import co.com.sms.colombia.persistencia.dao.impl.UsuarioDAOImpl;
+import co.com.sms.colombia.servicio.ConsultarCliente;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -15,14 +16,15 @@ import javax.ws.rs.QueryParam;
 
 /**
  *
- * @author SISTEMAS
+ * @author ScorTech
  */
 @Stateless
 @Path("/consultarCliente")
-public class ConsultarClienteImpl {
+public class ConsultarClienteImpl implements ConsultarCliente{
     
     @GET
     @Produces({"application/json"})
+    @Override
     public Usuario_TO consultarCliente( @QueryParam("cc") String cc) throws Exception {
         
         Usuario_TO usuarioN = new Usuario_TO();

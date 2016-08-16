@@ -7,6 +7,7 @@ package co.com.sms.colombia.persistencia.dao.impl;
 
 import co.com.sms.colombia.conexion.ConexionSQL;
 import co.com.sms.colombia.modelo.dto.Tarifa_TO;
+import co.com.sms.colombia.modelo.dto.Vehiculo_TO;
 import co.com.sms.colombia.persistencia.dao.TarifaDAO;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -21,11 +22,10 @@ public class TarifaDAOImpl implements TarifaDAO {
 
     /**
      *
-     * @param tarifa
      * @return @throws Exception
      */
     @Override
-    public Tarifa_TO consultarTarifa(Tarifa_TO tarifa) throws Exception {
+    public Tarifa_TO consultarTarifa() throws Exception {
 
         Tarifa_TO tar = new Tarifa_TO();
 
@@ -48,7 +48,7 @@ public class TarifaDAOImpl implements TarifaDAO {
             // LLAMA AL MÃ‰TODO
 
             while (rs.next()) {
-                tar = new Tarifa_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), new Empresa_TO(rs.getInt(8)), new Rol_TO(rs.getInt(9)), rs.getString(10));
+                tar = new Tarifa_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), new Vehiculo_TO(rs.getInt(10)));
 
             }
 

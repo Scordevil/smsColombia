@@ -59,6 +59,10 @@ public class Vehiculo_TO {
     public Vehiculo_TO() {
     }
 
+    public Vehiculo_TO(int idVehiculo) {
+        this.idVehiculo = idVehiculo;
+    }
+    
     public Vehiculo_TO(int idVehiculo, String nombre, String descripcion, String modelo, String marca, String placa) {
         this.idVehiculo = idVehiculo;
         this.nombre = nombre;
