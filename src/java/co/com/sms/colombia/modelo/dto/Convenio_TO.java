@@ -41,6 +41,12 @@ public class Convenio_TO {
     public Convenio_TO() {
     }
 
+    public Convenio_TO(int idConvenio) {
+        this.idConvenio = idConvenio;
+    }
+    
+    
+
     public Convenio_TO(int idConvenio, String nombre, int descuento) {
         this.idConvenio = idConvenio;
         this.nombre = nombre;
