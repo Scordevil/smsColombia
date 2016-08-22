@@ -29,6 +29,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(co.com.sms.colombia.servicio.impl.CalcularTarifaImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarClienteImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarDatosSesionUsuarioImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarEmpresasImpl.class);

@@ -78,6 +78,12 @@ public class Tarifa_TO {
      */
     private Vehiculo_TO vehiculo;
 
+    /**
+     *
+     * Columna costo
+     */
+    private int costo;
+
     //Constructores
     public Tarifa_TO() {
     }
@@ -95,6 +101,10 @@ public class Tarifa_TO {
         this.vehiculo = vehiculo;
     }
 
+    public Tarifa_TO(int costo) {
+        this.costo = costo;
+    }
+    
     //Getters and Setters
     public int getIdTarifa() {
         return idTarifa;
@@ -176,9 +186,18 @@ public class Tarifa_TO {
         this.vehiculo = vehiculo;
     }
 
+    public int getCosto() {
+        return costo;
+    }
+
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+
     @Override
     public String toString() {
-        return "Tarifa_TO{" + "idTarifa=" + idTarifa + ", minima=" + minima + ", kilometrosMenorQue=" + kilometrosMenorQue + ", kilometrosMayorQue=" + kilometrosMayorQue + ", minutos=" + minutos + ", servicioPorHora=" + servicioPorHora + ", servicioAeropuerto=" + servicioAeropuerto + ", arranqueOBanderazoPico=" + arranqueOBanderazoPico + ", arranqueOBanderazoValle=" + arranqueOBanderazoValle + ", vehiculo=" + vehiculo + '}';
+        return "Tarifa_TO{" + "idTarifa=" + idTarifa + ", minima=" + minima + ", kilometrosMenorQue=" + kilometrosMenorQue + ", kilometrosMayorQue=" + kilometrosMayorQue + ", minutos=" + minutos + ", servicioPorHora=" + servicioPorHora + ", servicioAeropuerto=" + servicioAeropuerto + ", arranqueOBanderazoPico=" + arranqueOBanderazoPico + ", arranqueOBanderazoValle=" + arranqueOBanderazoValle + ", vehiculo=" + vehiculo + ", costo=" + costo + '}';
     }
+    
 
 }
