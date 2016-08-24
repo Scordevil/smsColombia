@@ -8,8 +8,6 @@ package co.com.sms.colombia.persistencia.dao.impl;
 import co.com.sms.colombia.conexion.ConexionSQL;
 import co.com.sms.colombia.modelo.dto.Convenio_TO;
 import co.com.sms.colombia.modelo.dto.Empresa_TO;
-import co.com.sms.colombia.modelo.dto.Rol_TO;
-import co.com.sms.colombia.modelo.dto.Usuario_TO;
 import co.com.sms.colombia.persistencia.dao.EmpresaDAO;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -64,6 +62,50 @@ public class EmpresaDAOImpl implements EmpresaDAO {
         }
 
         return empresas;
+    }
+
+    /**
+     *
+     * @param idEmpresa
+     * @return @throws Exception
+     */
+    @Override
+    public Empresa_TO consultarEmpresa(Empresa_TO idEmpresa) throws Exception {
+
+        Empresa_TO empresa = new Empresa_TO();
+
+        try {
+
+            // // //Seleccionar todos los registros
+            String sql = "SELECT `empresa`.`idempresa`, "
+                    + "    `empresa`.`nombre`, "
+                    + "    `empresa`.`descripcion`, "
+                    + "    `empresa`.`nit`, "
+                    + "    `empresa`.`telefono`, "
+                    + "    `empresa`.`correo`, "
+                    + "    `empresa`.`paginaweb`, "
+                    + "    `empresa`.`direccion`, "
+                    + "    `empresa`.`idconvenio` "
+                    + "FROM `smscolombia`.`empresa`"
+                    + " where `empresa`.`idempresa` = "+idEmpresa.getIdEmpresa()+";";
+
+            ResultSet rs = st.executeQuery(sql);
+            // LLAMA AL MÃ‰TODO
+
+            while (rs.next()) {
+                empresa = new Empresa_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), new Convenio_TO(rs.getInt(9)));
+
+            }
+
+        } catch (Exception e) {
+
+            throw e;
+
+        } finally {
+            ConexionSQL.CerrarConexion();
+        }
+
+        return empresa;
     }
 
 }

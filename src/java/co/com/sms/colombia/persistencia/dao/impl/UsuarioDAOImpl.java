@@ -123,6 +123,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
                     + "`contrasena`, "
                     + "idempresa, "
                     + "`nombre`, "
+                    + "`idlugares`, "
                     + "idrol) "
                     + "VALUES ('"
                     + usuario.getCc() + "', '"
@@ -133,6 +134,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
                     + usuario.getContrasena() + "', "
                     + usuario.getEmpresa().getIdEmpresa() + ", '"
                     + usuario.getNombre() + "',"
+                     + usuario.getIdLugar().getIdLugares()+ ","
                     + usuario.getIdRol().getIdRol() + " ); ";
 
             System.out.println("sql: " + sql);

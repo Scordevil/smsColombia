@@ -6,6 +6,7 @@
 package co.com.sms.colombia.servicio.impl;
 
 import co.com.sms.colombia.modelo.dto.Empresa_TO;
+import co.com.sms.colombia.modelo.dto.Lugares_TO;
 import co.com.sms.colombia.modelo.dto.Rol_TO;
 import co.com.sms.colombia.modelo.dto.Usuario_TO;
 import co.com.sms.colombia.persistencia.dao.impl.UsuarioDAOImpl;
@@ -36,11 +37,13 @@ public class RegistrarClientesImpl implements RegistrarCliente {
             @QueryParam("contrasena") String contrasena,
             @QueryParam("idEmpresa") int idEmpresa,
             @QueryParam("idRol") int idRol,
-            @QueryParam("nombre") String nombre ) throws Exception {
-
+            @QueryParam("idLugares") int idLugar,
+            @QueryParam("nombre") String nombre
+            ) throws Exception {
+            
         // instancia del Cliente con onstructor especifico para ingresar datos del cliente
         Usuario_TO cliente = new Usuario_TO(cc, telefono, movil, correo,
-                usuario, contrasena, new Empresa_TO(idEmpresa),new Rol_TO(idRol), nombre);
+                usuario, contrasena, new Empresa_TO(idEmpresa),new Rol_TO(idRol), new Lugares_TO(idLugar), nombre);
 
         UsuarioDAOImpl user = new UsuarioDAOImpl();
 

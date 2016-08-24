@@ -71,16 +71,20 @@ public class Usuario_TO {
      * Columna idRol
      */
     private Rol_TO idRol;
-    
-    
+
+    /**
+     *
+     * Columna idLugar
+     */
+    private Lugares_TO idLugar;
+
     /**
      *
      * Columna nombre
      */
     private String nombre;
-    
-    //Constructores
 
+    //Constructores
     public Usuario_TO() {
     }
 
@@ -102,7 +106,7 @@ public class Usuario_TO {
         this.nombre = nombre;
     }
 
-    public Usuario_TO(String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, String nombre) {
+    public Usuario_TO(String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, Lugares_TO idLugar, String nombre) {
         this.cc = cc;
         this.telefono = telefono;
         this.movil = movil;
@@ -111,8 +115,11 @@ public class Usuario_TO {
         this.contrasena = contrasena;
         this.empresa = empresa;
         this.idRol = idRol;
+        this.idLugar = idLugar;
         this.nombre = nombre;
     }
+    
+    
 
     public Usuario_TO(int idUsuario, String cc) {
         this.idUsuario = idUsuario;
@@ -122,14 +129,8 @@ public class Usuario_TO {
     public Usuario_TO(int idUsuario) {
         this.idUsuario = idUsuario;
     }
-    
-    
-    
-    
-    
-    
-    //Getters and Setters
 
+    //Getters and Setters
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -210,10 +211,19 @@ public class Usuario_TO {
         this.nombre = nombre;
     }
 
+    public Lugares_TO getIdLugar() {
+        return idLugar;
+    }
+
+    public void setIdLugar(Lugares_TO idLugar) {
+        this.idLugar = idLugar;
+    }
+
     @Override
     public String toString() {
-        return "Usuario_TO{" + "idUsuario=" + idUsuario + ", cc=" + cc + ", telefono=" + telefono + ", movil=" + movil + ", correo=" + correo + ", usuario=" + usuario + ", contrasena=" + contrasena + ", empresa=" + empresa + ", idRol=" + idRol + ", nombre=" + nombre + '}';
+        return "Usuario_TO{" + "idUsuario=" + idUsuario + ", cc=" + cc + ", telefono=" + telefono + ", movil=" + movil + ", correo=" + correo + ", usuario=" + usuario + ", contrasena=" + contrasena + ", empresa=" + empresa + ", idRol=" + idRol + ", idLugar=" + idLugar + ", nombre=" + nombre + '}';
     }
     
+
 
 }

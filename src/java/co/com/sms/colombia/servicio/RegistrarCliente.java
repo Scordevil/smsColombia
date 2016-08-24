@@ -14,6 +14,6 @@ import co.com.sms.colombia.modelo.dto.Usuario_TO;
  */
 public interface RegistrarCliente {
 
-    public Usuario_TO registrarClientes(String cc, String telefono, String movil,String correo, String usuario, String contrasena,int idEmpresa, int idRol, String nombre) throws Exception;
+    public Usuario_TO registrarClientes(String cc, String telefono, String movil,String correo, String usuario, String contrasena,int idEmpresa, int idRol,int idLugar, String nombre) throws Exception;
 
 }

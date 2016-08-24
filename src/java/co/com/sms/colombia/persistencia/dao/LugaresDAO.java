@@ -5,20 +5,18 @@
  */
 package co.com.sms.colombia.persistencia.dao;
 
-import co.com.sms.colombia.modelo.dto.Empresa_TO;
+import co.com.sms.colombia.modelo.dto.Lugares_TO;
 import java.util.List;
 
 /**
  *
  * Interfaz que contiene los metodos de persistencia relacionados con la entidad
- * Empresa
+ * Lugares
  *
  * @author Scortech
  */
-public interface EmpresaDAO {
+public interface LugaresDAO {
     
-    public List<Empresa_TO> consultarEmpresas() throws Exception;
-    
-    public Empresa_TO consultarEmpresa(Empresa_TO idEmpresa) throws Exception;
+    public List<Lugares_TO> consultarAeropuertos() throws Exception;
     
 }
