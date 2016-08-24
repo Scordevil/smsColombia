@@ -93,7 +93,7 @@ public class Usuario_TO {
         this.contrasena = contrasena;
     }
 
-    public Usuario_TO(int idUsuario, String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, String nombre) {
+    public Usuario_TO(int idUsuario, String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, Lugares_TO idLugar, String nombre) {
         this.idUsuario = idUsuario;
         this.cc = cc;
         this.telefono = telefono;
@@ -103,8 +103,10 @@ public class Usuario_TO {
         this.contrasena = contrasena;
         this.empresa = empresa;
         this.idRol = idRol;
+        this.idLugar = idLugar;
         this.nombre = nombre;
     }
+
 
     public Usuario_TO(String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, Lugares_TO idLugar, String nombre) {
         this.cc = cc;
@@ -118,6 +120,8 @@ public class Usuario_TO {
         this.idLugar = idLugar;
         this.nombre = nombre;
     }
+    
+    
     
     
 

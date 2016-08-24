@@ -60,4 +60,44 @@ public class LugaresDAOImpl implements LugaresDAO {
         return lugares;
     }
 
+    /**
+     *
+     * @param lugar
+     * @return @throws Exception
+     */
+    @Override
+    public Lugares_TO consultarLugar(Lugares_TO lugar) throws Exception {
+
+        Lugares_TO lugares = new Lugares_TO();
+
+        try {
+
+            // // //Seleccionar todos los registros
+            String sql = "SELECT `lugares`.`idlugares`, "
+                    + "    `lugares`.`nombre`, "
+                    + "    `lugares`.`descripcion`, "
+                    + "    `lugares`.`latitud`, "
+                    + "    `lugares`.`longitud`, "
+                    + "    `lugares`.`aeropuerto` "
+                    + "FROM `smscolombia`.`lugares`"
+                    + " where  `lugares`.`idlugares` = "+lugar.getIdLugares()+" ;";
+
+            ResultSet rs = st.executeQuery(sql);
+            // LLAMA AL MeTODO
+
+            while (rs.next()) {
+                lugares = new Lugares_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
+            }
+
+        } catch (Exception e) {
+
+            throw e;
+
+        } finally {
+            ConexionSQL.CerrarConexion();
+        }
+
+        return lugares;
+    }
+
 }

@@ -8,6 +8,7 @@ package co.com.sms.colombia.persistencia.dao.impl;
 import co.com.sms.colombia.conexion.ConexionSQL;
 import co.com.sms.colombia.config.Config;
 import co.com.sms.colombia.modelo.dto.Empresa_TO;
+import co.com.sms.colombia.modelo.dto.Lugares_TO;
 import co.com.sms.colombia.modelo.dto.Rol_TO;
 import co.com.sms.colombia.modelo.dto.Usuario_TO;
 import co.com.sms.colombia.persistencia.dao.UsuarioDAO;
@@ -49,6 +50,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
                     + "    `u`.`contrasena`, "
                     + "    `u`.`idempresa`, "
                     + "    `u`.`idrol` ,"
+                    + "    `u`.`idlugares` ,"
                     + "    `u`.`nombre` "
                     + "FROM `smscolombia`.`usuario` as u "
                     + "where "
@@ -58,7 +60,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
             // LLAMA AL MÃ‰TODO
 
             while (rs.next()) {
-                user = new Usuario_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), new Empresa_TO(rs.getInt(8)), new Rol_TO(rs.getInt(9)), rs.getString(10));
+                user = new Usuario_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), new Empresa_TO(rs.getInt(8)), new Rol_TO(rs.getInt(9)),new Lugares_TO(rs.getInt(10)), rs.getString(11));
 
                 registro = registro + 1;
             }
@@ -177,6 +179,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
                     + "    `u`.`contrasena`, "
                     + "    `u`.`idempresa`, "
                     + "    `u`.`idrol`, "
+                    + "    `u`.`idlugares`, "
                     + "    `u`.`nombre` "
                     + "FROM `smscolombia`.`usuario` as u "
                     + "where "
@@ -186,7 +189,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
             // LLAMA AL MÃ‰TODO
 
             while (rs.next()) {
-                usuario = new Usuario_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), new Empresa_TO(rs.getInt(8)), new Rol_TO(rs.getInt(9)), rs.getString(10));
+                usuario = new Usuario_TO(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7), new Empresa_TO(rs.getInt(8)), new Rol_TO(rs.getInt(9)),new Lugares_TO(rs.getInt(10)), rs.getString(11));
 
              }
 

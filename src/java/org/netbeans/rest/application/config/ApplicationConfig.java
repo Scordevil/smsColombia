@@ -35,6 +35,7 @@ public class ApplicationConfig extends Application {
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarDatosSesionUsuarioImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarEmpresaImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsultarEmpresasImpl.class);
+        resources.add(co.com.sms.colombia.servicio.impl.ConsultarLugarImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.ConsutarTarifaImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.RegistrarClientesImpl.class);
         resources.add(co.com.sms.colombia.servicio.impl.RegistrarServicioImpl.class);

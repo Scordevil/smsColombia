@@ -18,5 +18,6 @@ import java.util.List;
 public interface LugaresDAO {
     
     public List<Lugares_TO> consultarAeropuertos() throws Exception;
+    public Lugares_TO consultarLugar(Lugares_TO lugar) throws Exception;
     
 }
