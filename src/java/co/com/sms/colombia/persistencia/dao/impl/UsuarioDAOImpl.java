@@ -13,7 +13,6 @@ import co.com.sms.colombia.modelo.dto.Rol_TO;
 import co.com.sms.colombia.modelo.dto.Usuario_TO;
 import co.com.sms.colombia.persistencia.dao.UsuarioDAO;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 /**

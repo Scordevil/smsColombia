@@ -8,8 +8,6 @@ package co.com.sms.colombia.servicio.impl;
 import co.com.sms.colombia.modelo.dto.Lugares_TO;
 import co.com.sms.colombia.persistencia.dao.impl.LugaresDAOImpl;
 import co.com.sms.colombia.servicio.ConsultarLugar;
-import java.util.ArrayList;
-import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

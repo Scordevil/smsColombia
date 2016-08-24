@@ -20,7 +20,7 @@ public class Vehiculo_TO {
     
     /**
      *
-     * Columna idTipoVehiculo
+     * Columna idVehiculo
      */
     private int idVehiculo;
 
