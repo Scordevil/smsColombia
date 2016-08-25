@@ -18,4 +18,6 @@ public interface ServicioDAO {
     
     public Servicio_TO registrarServicio(Servicio_TO servicio) throws Exception;
     
+    public Servicio_TO consultarServicio(Servicio_TO servicio) throws Exception;
+    
 }

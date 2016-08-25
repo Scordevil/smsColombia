@@ -100,6 +100,11 @@ public class Servicio_TO {
     public Servicio_TO() {
     }
 
+    public Servicio_TO(int idServicio) {
+        this.idServicio = idServicio;
+    }
+   
+
     public Servicio_TO(int idServicio, String puntoInicioLong, String puntoInicioLat, String puntoFinalLong, String puntoFinalLat, String lugarInicio, String lugarDestino, String placa, String costo, Usuario_TO usuario, Empresa_TO empresa) {
         this.idServicio = idServicio;
         this.puntoInicioLong = puntoInicioLong;
