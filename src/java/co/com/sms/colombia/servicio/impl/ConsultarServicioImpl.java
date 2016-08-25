@@ -5,9 +5,7 @@
  */
 package co.com.sms.colombia.servicio.impl;
 
-import co.com.sms.colombia.modelo.dto.Lugares_TO;
 import co.com.sms.colombia.modelo.dto.Servicio_TO;
-import co.com.sms.colombia.persistencia.dao.impl.LugaresDAOImpl;
 import co.com.sms.colombia.persistencia.dao.impl.ServicioDAOImpl;
 import co.com.sms.colombia.servicio.ConsultarServicio;
 import javax.ejb.Stateless;
