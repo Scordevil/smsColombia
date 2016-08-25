@@ -93,6 +93,14 @@ public class Usuario_TO {
         this.contrasena = contrasena;
     }
 
+    public Usuario_TO(String correo, String contrasena, String nombre) {
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.nombre = nombre;
+    }
+    
+    
+
     public Usuario_TO(int idUsuario, String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, Lugares_TO idLugar, String nombre) {
         this.idUsuario = idUsuario;
         this.cc = cc;
