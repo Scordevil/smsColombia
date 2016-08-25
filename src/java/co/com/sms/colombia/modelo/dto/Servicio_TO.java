@@ -23,69 +23,80 @@ public class Servicio_TO {
      * Columna idservicio
      */
     private int idServicio;
-    
+
     /**
      *
      * Columna puntoiniciolong
      */
     private String puntoInicioLong;
-    
+
     /**
      *
      * Columna puntoinicioLat
      */
     private String puntoInicioLat;
-    
+
     /**
      *
      * Columna puntofinallong
      */
     private String puntoFinalLong;
-    
+
     /**
      *
      * Columna puntofinallat
      */
     private String puntoFinalLat;
-    
+
     /**
      *
      * Columna lugarinicio
      */
     private String lugarInicio;
-    
+
     /**
      *
      * Columna lugardestino
      */
     private String lugarDestino;
-    
+
     /**
      *
      * Columna placa
      */
     private String placa;
-    
+
     /**
      *
      * Columna costo
      */
     private String costo;
-    
+
     /**
      *
      * Columna idUsuario
      */
     private Usuario_TO usuario;
-    
+
     /**
      *
      * Columna idEmpresa
      */
     private Empresa_TO empresa;
-    
-    //Constructores
 
+    /**
+     *
+     * Columna nombreCliente
+     */
+    private String nombreCliente;
+
+    /**
+     *
+     * Columna ccCLiente
+     */
+    private String ccCLiente;
+
+    //Constructores
     public Servicio_TO() {
     }
 
@@ -115,10 +126,42 @@ public class Servicio_TO {
         this.usuario = usuario;
         this.empresa = empresa;
     }
-        
-    
-    //Getters and Setters
 
+    public Servicio_TO(int idServicio, String puntoInicioLong, String puntoInicioLat, String puntoFinalLong, String puntoFinalLat, String lugarInicio, String lugarDestino, String placa, String costo, Usuario_TO usuario, Empresa_TO empresa, String nombreCliente, String ccCLiente) {
+        this.idServicio = idServicio;
+        this.puntoInicioLong = puntoInicioLong;
+        this.puntoInicioLat = puntoInicioLat;
+        this.puntoFinalLong = puntoFinalLong;
+        this.puntoFinalLat = puntoFinalLat;
+        this.lugarInicio = lugarInicio;
+        this.lugarDestino = lugarDestino;
+        this.placa = placa;
+        this.costo = costo;
+        this.usuario = usuario;
+        this.empresa = empresa;
+        this.nombreCliente = nombreCliente;
+        this.ccCLiente = ccCLiente;
+    }
+
+    public Servicio_TO(String puntoInicioLong, String puntoInicioLat, String puntoFinalLong, String puntoFinalLat, String lugarInicio, String lugarDestino, String placa, String costo, Usuario_TO usuario, Empresa_TO empresa, String nombreCliente, String ccCLiente) {
+        this.puntoInicioLong = puntoInicioLong;
+        this.puntoInicioLat = puntoInicioLat;
+        this.puntoFinalLong = puntoFinalLong;
+        this.puntoFinalLat = puntoFinalLat;
+        this.lugarInicio = lugarInicio;
+        this.lugarDestino = lugarDestino;
+        this.placa = placa;
+        this.costo = costo;
+        this.usuario = usuario;
+        this.empresa = empresa;
+        this.nombreCliente = nombreCliente;
+        this.ccCLiente = ccCLiente;
+    }
+    
+    
+    
+
+    //Getters and Setters
     public int getIdServicio() {
         return idServicio;
     }
@@ -207,12 +250,25 @@ public class Servicio_TO {
         this.empresa = empresa;
     }
 
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public String getCcCLiente() {
+        return ccCLiente;
+    }
+
+    public void setCcCLiente(String ccCLiente) {
+        this.ccCLiente = ccCLiente;
+    }
+
     @Override
     public String toString() {
-        return "Servicio_TO{" + "idServicio=" + idServicio + ", puntoInicioLong=" + puntoInicioLong + ", puntoInicioLat=" + puntoInicioLat + ", puntoFinalLong=" + puntoFinalLong + ", puntoFinalLat=" + puntoFinalLat + ", lugarInicio=" + lugarInicio + ", lugarDestino=" + lugarDestino + ", placa=" + placa + ", costo=" + costo + ", usuario=" + usuario + ", empresa=" + empresa + '}';
+        return "Servicio_TO{" + "idServicio=" + idServicio + ", puntoInicioLong=" + puntoInicioLong + ", puntoInicioLat=" + puntoInicioLat + ", puntoFinalLong=" + puntoFinalLong + ", puntoFinalLat=" + puntoFinalLat + ", lugarInicio=" + lugarInicio + ", lugarDestino=" + lugarDestino + ", placa=" + placa + ", costo=" + costo + ", usuario=" + usuario + ", empresa=" + empresa + ", nombreCliente=" + nombreCliente + ", ccCLiente=" + ccCLiente + '}';
     }
-    
-    
-    
 
 }

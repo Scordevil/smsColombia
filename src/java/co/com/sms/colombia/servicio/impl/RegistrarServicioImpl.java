@@ -33,10 +33,10 @@ public class RegistrarServicioImpl implements RegistrarServicio {
             @QueryParam("puntofinalLat") String puntofinalLat, @QueryParam("lugarinicio") String lugarinicio,
             @QueryParam("lugardestino") String lugardestino, @QueryParam("placa") String placa,
             @QueryParam("costo") String costo, @QueryParam("idusuario") int idusuario,
-            @QueryParam("idempresa") int idempresa) throws Exception {
+            @QueryParam("idempresa") int idempresa,@QueryParam("nombreCliente") String nombreCliente, @QueryParam("ccCliente") String ccCliente ) throws Exception {
 
         // instancia del Cliente con onstructor especifico para ingresar datos del cliente
-        Servicio_TO servicio = new Servicio_TO(puntoinicioLong, puntoinicioLat, puntofinalLong, puntofinalLat, lugarinicio, lugardestino, placa, costo, new Usuario_TO(idusuario), new Empresa_TO(idempresa));
+        Servicio_TO servicio = new Servicio_TO(puntoinicioLong, puntoinicioLat, puntofinalLong, puntofinalLat, lugarinicio, lugardestino, placa, costo, new Usuario_TO(idusuario), new Empresa_TO(idempresa), nombreCliente, ccCliente);
         
         ServicioDAOImpl user = new ServicioDAOImpl();
         

@@ -13,6 +13,6 @@ import co.com.sms.colombia.modelo.dto.Servicio_TO;
  */
 public interface RegistrarServicio {
 
-    public Servicio_TO registrarServicio(String puntoinicioLong, String puntofinalLong, String puntoinicioLat, String puntofinalLat, String lugarinicio, String lugardestino, String placa, String costo, int idusuario, int idempresa) throws Exception;
+    public Servicio_TO registrarServicio(String puntoinicioLong, String puntofinalLong, String puntoinicioLat, String puntofinalLat, String lugarinicio, String lugardestino, String placa, String costo, int idusuario, int idempresa, String nombreCliente, String ccCliente) throws Exception;
 
 }

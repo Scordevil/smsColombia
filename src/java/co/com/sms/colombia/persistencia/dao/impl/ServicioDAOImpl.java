@@ -42,7 +42,9 @@ public class ServicioDAOImpl implements ServicioDAO {
                     + "`placa`, "
                     + "`costo`, "
                     + "`idusuario`, "
-                    + "`idempresa`) "
+                    + "`idempresa`, " 
+                    + "`nombreCliente`,"
+                    + "`ccCliente`) "
                     + "VALUES ('"
                     + servicio.getPuntoInicioLong()+"', '"
                     + servicio.getPuntoFinalLong()+"', '"
@@ -53,7 +55,9 @@ public class ServicioDAOImpl implements ServicioDAO {
                     + servicio.getPlaca()+"', '"
                     + servicio.getCosto()+"', "
                     + servicio.getUsuario().getIdUsuario()+", "
-                    + servicio.getEmpresa().getIdEmpresa()+");";
+                    + servicio.getEmpresa().getIdEmpresa()+",' "
+                    + servicio.getNombreCliente()+"', '"
+                    + servicio.getCcCLiente()+"');";
 
             System.out.println("sql: " + sql);
 
