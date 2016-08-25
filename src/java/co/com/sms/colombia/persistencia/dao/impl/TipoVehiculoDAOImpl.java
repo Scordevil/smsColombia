@@ -10,6 +10,8 @@ import co.com.sms.colombia.modelo.dto.TipoVehiculo_TO;
 import co.com.sms.colombia.persistencia.dao.TipoVehiculoDAO;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -55,6 +57,42 @@ public class TipoVehiculoDAOImpl implements TipoVehiculoDAO {
         }
 
         return tv;
+    }
+    
+     /**
+     *
+     * @return @throws Exception
+     */
+    @Override
+    public List<TipoVehiculo_TO> consultarTipoVehiculos() throws Exception {
+
+        List<TipoVehiculo_TO> tvs = new ArrayList<>();
+
+        try {
+
+            // // //Seleccionar todos los registros
+            String sql = "SELECT `tv`.`idTipoVehiculo`, "
+                    + "    `tv`.`nombre`, "
+                    + "    `tv`.`descripcion` "
+                    + "FROM `smscolombia`.`tipovehiculo` as `tv`;";
+
+            ResultSet rs = st.executeQuery(sql);
+            // LLAMA AL MÃ‰TODO
+
+            while (rs.next()) {
+                tvs.add(new TipoVehiculo_TO(rs.getInt(1), rs.getString(2), rs.getString(3)));
+
+            }
+
+        } catch (Exception e) {
+
+            throw e;
+
+        } finally {
+            ConexionSQL.CerrarConexion();
+        }
+
+        return tvs;
     }
 
 }
