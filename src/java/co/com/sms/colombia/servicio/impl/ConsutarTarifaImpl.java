@@ -12,6 +12,7 @@ import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 /**
  *
@@ -24,12 +25,12 @@ public class ConsutarTarifaImpl implements ConsultarTarifa {
     @GET
     @Produces({"application/json"})
     @Override
-    public Tarifa_TO consultarTarifa() throws Exception {
+    public Tarifa_TO consultarTarifa(@QueryParam("idTipoVehiculo") int idTipoVehiculo) throws Exception {
 
         Tarifa_TO tarifa = new Tarifa_TO();
         TarifaDAOImpl tar = new TarifaDAOImpl();
 
-        tarifa = tar.consultarTarifa();
+        tarifa = tar.consultarTarifa(idTipoVehiculo);
 
         return tarifa;
 

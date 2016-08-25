@@ -16,7 +16,7 @@ import co.com.sms.colombia.modelo.dto.Tarifa_TO;
  */
 public interface TarifaDAO {
     
-    public Tarifa_TO consultarTarifa() throws Exception;
+    public Tarifa_TO consultarTarifa(int idTipoVehiculo) throws Exception;
     public Tarifa_TO calcularTarifa(int kilometros, int idTipoVehiculo) throws Exception;
     
 }

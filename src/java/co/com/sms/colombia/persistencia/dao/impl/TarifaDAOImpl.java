@@ -23,10 +23,11 @@ public class TarifaDAOImpl implements TarifaDAO {
 
     /**
      *
+     * @param idTipoVehiculo
      * @return @throws Exception
      */
     @Override
-    public Tarifa_TO consultarTarifa() throws Exception {
+    public Tarifa_TO consultarTarifa(int idTipoVehiculo) throws Exception {
 
         Tarifa_TO tar = new Tarifa_TO();
 
@@ -43,7 +44,8 @@ public class TarifaDAOImpl implements TarifaDAO {
                     + "    `tarifas`.`arranqueobanderazoPico`, "
                     + "    `tarifas`.`arranqueobanderazoValle`, "
                     + "    `tarifas`.`idtipoVehiculo` "
-                    + "FROM `smscolombia`.`tarifas`;";
+                    + "FROM `smscolombia`.`tarifas`"
+                    + " where `tarifas`.`idtipoVehiculo` = "+idTipoVehiculo+";";
 
             ResultSet rs = st.executeQuery(sql);
             // LLAMA AL MÃ‰TODO
